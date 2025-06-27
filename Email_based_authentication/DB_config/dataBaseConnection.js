@@ -1,6 +1,7 @@
 import mongo from 'mongoose';
 
-const { MONGO_URI } = process.env;
+
+const MONGO_URI  = "mongodb://localhost:27017/mydatabase"; // Default to local MongoDB if no URI is provided
 
 const database = mongo;
 
