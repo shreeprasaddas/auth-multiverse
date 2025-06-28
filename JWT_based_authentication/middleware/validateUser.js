@@ -4,6 +4,7 @@ const validateUser = async (req , res , next) =>{
     const cookie = req.cookies.cookie;
 
     const isValidToken = await verifyToken(cookie);
+    console.log("Token verification result:", isValidToken);
 
     if(isValidToken){
         console.log("User is authenticated");

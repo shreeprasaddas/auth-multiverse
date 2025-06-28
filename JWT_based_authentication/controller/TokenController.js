@@ -4,7 +4,7 @@ dotenv.config();
 
 
 const createToken =async (user) => {
-    const token = await jjwt.sign(
+    const token = await jwt.sign(
         {email:user.email,password:user.password},
         process.env.JWT_SECRET,
         {expiresIn:'1h'}
